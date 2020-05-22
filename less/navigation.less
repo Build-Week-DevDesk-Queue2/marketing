@@ -1,15 +1,44 @@
 header {
   display: flex;
-
-  img {
-    cursor: pointer;
+  @media @desktop {
+    margin: 2%;
   }
 
-  nav {
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    img {
+      cursor: pointer;
+    }
+
+    p {
+      @media @mobile {
+        visibility: hidden;
+      }
+
+      @media @desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-family: sans-serif;
+        font-weight: bold;
+        width: 131px;
+        height: 51px;
+      }
+    }
+  }
+
+  .nav-mobile {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media @desktop {
+      visibility: hidden;
+    }
 
     a {
       color: @cadet-black;
@@ -43,6 +72,32 @@ header {
     }
     .helper-button {
       background-color: @cadet-black;
+    }
+  }
+
+  .nav-desktop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media @mobile {
+      visibility: hidden;
+      width: 0px;
+      height: 0px;
+    }
+
+    a {
+      color: @secondary-cadet;
+      font-size: 1rem;
+      font-family: sans-serif;
+      text-decoration: none;
+      outline: none;
+      font-weight: lighter;
+    }
+
+    .first-three {
+      margin-right: 10%;
     }
   }
 }

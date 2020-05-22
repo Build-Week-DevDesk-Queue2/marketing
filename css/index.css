@@ -125,16 +125,47 @@ table {
 header {
   display: flex;
 }
-header img {
+@media (min-width: 1000px) {
+  header {
+    margin: 2%;
+  }
+}
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+header .logo-container img {
   cursor: pointer;
 }
-header nav {
+@media (max-width: 999px) {
+  header .logo-container p {
+    visibility: hidden;
+  }
+}
+@media (min-width: 1000px) {
+  header .logo-container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 131px;
+    height: 51px;
+  }
+}
+header .nav-mobile {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-header nav a {
+@media (min-width: 1000px) {
+  header .nav-mobile {
+    visibility: hidden;
+  }
+}
+header .nav-mobile a {
   color: #2E2C48;
   font-size: 1rem;
   font-family: sans-serif;
@@ -144,7 +175,7 @@ header nav a {
   padding-bottom: 0.17rem;
   outline: none;
 }
-header nav button {
+header .nav-mobile button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -159,94 +190,238 @@ header nav button {
   outline: none;
   cursor: pointer;
 }
-header nav .student-button {
+header .nav-mobile .student-button {
   background-color: #C716C4;
 }
-header nav .helper-button {
+header .nav-mobile .helper-button {
   background-color: #2E2C48;
 }
-body .container {
-  background-color: #ffffff;
-  margin: 4%;
+header .nav-desktop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-body .container .discription {
-  margin: 15% 0%;
-  width: 80%;
+@media (max-width: 999px) {
+  header .nav-desktop {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
 }
-body .container .discription p {
+header .nav-desktop a {
+  color: #525575;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-decoration: none;
+  outline: none;
+  font-weight: lighter;
+}
+header .nav-desktop .first-three {
+  margin-right: 10%;
+}
+@media (max-width: 999px) {
+  body .container {
+    background-color: #ffffff;
+    margin: 4%;
+  }
+}
+@media (min-width: 1000px) {
+  body .container {
+    margin: 0%;
+    margin-bottom: 0%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 999px) {
+  body .container .disc-container {
+    margin: 15% 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1000px) {
+  body .container .disc-container {
+    width: 100%;
+    margin: 0%;
+    display: flex;
+  }
+}
+@media (min-width: 1000px) {
+  body .container .disc-container .discription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    padding-left: 10%;
+  }
+}
+@media (max-width: 999px) {
+  body .container .disc-container .discription {
+    margin-bottom: 10%;
+  }
+}
+body .container .disc-container .discription p {
   color: #2E2C48;
   font-family: sans-serif;
 }
-body .container .discription .get {
+body .container .disc-container .discription .get {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 3%;
 }
-body .container .discription .making {
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .get {
+    font-size: 3rem;
+  }
+}
+body .container .disc-container .discription .making {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 3%;
   width: 78%;
   line-height: 2.8rem;
 }
-body .container .discription .request {
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .making {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+body .container .disc-container .discription .request {
   font-size: 1.5rem;
   margin-bottom: 7%;
 }
-body .container .discription .submit {
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .request {
+    font-size: 3rem;
+  }
+}
+body .container .disc-container .discription .submit {
   font-size: 1rem;
   font-weight: lighter;
   width: 80%;
   margin-bottom: 7%;
   line-height: 1.5rem;
 }
-body .container .discription .view {
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .submit {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+}
+body .container .disc-container .discription .view {
   font-size: 1rem;
   font-weight: lighter;
   width: 75%;
   margin-bottom: 7%;
   line-height: 1.5rem;
 }
-body .container .discription button {
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .view {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+body .container .disc-container .discription button {
   font-size: 1rem;
   padding: 2.5% 7%;
   border-radius: 8px;
   outline: none;
   cursor: pointer;
 }
-body .container .discription .student-button {
+body .container .disc-container .discription .student-button {
   color: #ffffff;
   font-weight: bold;
   background-color: #C716C4;
 }
-body .container .discription .helper-button {
-  color: #2E2C48;
-  font-weight: bold;
-  background-color: #0AC3CF;
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .student-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2.5% 10%;
+  }
 }
-body .container .iPhone {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%;
+@media (max-width: 999px) {
+  body .container .disc-container .discription .helper-button {
+    color: #2E2C48;
+    font-weight: bold;
+    background-color: #0AC3CF;
+  }
 }
-body .footer footer {
-  background-color: #F9FAFB;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 4%;
-  border-top: 1px solid #E0E0E0;
+@media (min-width: 1000px) {
+  body .container .disc-container .discription .helper-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2.5% 10%;
+    background-color: #0AC3CF;
+  }
 }
-body .footer footer a {
-  text-decoration: none;
-  font-family: sans-serif;
-  color: #525575;
-  margin-bottom: 4%;
-  font-size: 1.2rem;
+@media (max-width: 999px) {
+  body .container .disc-container .iPhone-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
 }
-body .footer footer p {
-  font-family: sans-serif;
-  color: #646378;
-  font-weight: lighter;
-  margin-top: 3%;
+@media (min-width: 1000px) {
+  body .container .disc-container .iPhone-mobile {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin-bottom: 0%;
+  }
+}
+@media (max-width: 999px) {
+  body .container .disc-container .iPhone-desktop {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin-bottom: 0%;
+  }
+}
+@media (min-width: 1000px) {
+  body .container .disc-container .iPhone-desktop {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0%;
+    padding-right: 2%;
+  }
+}
+@media (max-width: 999px) {
+  body .footer footer {
+    background-color: #F9FAFB;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    border-top: 1px solid #E0E0E0;
+  }
+  body .footer footer a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #525575;
+    margin-bottom: 4%;
+    font-size: 1.2rem;
+  }
+  body .footer footer p {
+    font-family: sans-serif;
+    color: #646378;
+    font-weight: lighter;
+    margin-top: 3%;
+  }
+}
+@media (min-width: 1000px) {
+  body .footer {
+    visibility: hidden;
+    margin-bottom: 0%;
+    height: 0px;
+  }
 }
