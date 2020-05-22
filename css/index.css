@@ -127,7 +127,7 @@ header {
 }
 @media (min-width: 1000px) {
   header {
-    margin: 2%;
+    margin: 0% 2%;
   }
 }
 header .logo-container {
@@ -421,7 +421,20 @@ body .container .disc-container .discription .student-button {
 @media (min-width: 1000px) {
   body .footer {
     visibility: hidden;
-    margin-bottom: 0%;
+  }
+  body .footer footer {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  body .footer footer a {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  body .footer footer p {
+    visibility: hidden;
+    width: 0px;
     height: 0px;
   }
 }
