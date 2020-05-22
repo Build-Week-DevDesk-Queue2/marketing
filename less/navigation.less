@@ -1,0 +1,48 @@
+header {
+  display: flex;
+
+  img {
+    cursor: pointer;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      color: @cadet-black;
+      font-size: 1rem;
+      font-family: sans-serif;
+      margin-right: 4%;
+      text-decoration: none;
+      border-bottom: 0.1rem solid @cadet-black;
+      padding-bottom: 0.17rem;
+      outline: none;
+    }
+
+    button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 2% 5%;
+      white-space: nowrap;
+      width: 6.5rem;
+      outline: none;
+      cursor: pointer;
+
+    }
+    .student-button {
+      background-color: @murple-purple;
+    }
+    .helper-button {
+      background-color: @cadet-black;
+    }
+  }
+}
