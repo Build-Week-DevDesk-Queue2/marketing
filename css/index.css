@@ -223,6 +223,12 @@ header .nav-desktop .first-three {
   margin-right: 10%;
 }
 @media (max-width: 999px) {
+  .footer {
+    width: 92.5%;
+    margin: 0px;
+  }
+}
+@media (max-width: 999px) {
   .footer footer {
     background-color: #F9FAFB;
     width: 100%;
@@ -230,6 +236,7 @@ header .nav-desktop .first-three {
     flex-direction: column;
     padding: 4%;
     border-top: 1px solid #E0E0E0;
+    margin: 0px;
   }
 }
 @media (max-width: 999px) {
@@ -430,7 +437,7 @@ body .container .disc-container .discription .student-button {
   }
 }
 @media (max-width: 999px) {
-  body .container .disc-container .iPhone-desktop {
+  body .container .disc-container .iPhone-desktop img {
     visibility: hidden;
     width: 0px;
     height: 0px;
@@ -438,7 +445,7 @@ body .container .disc-container .discription .student-button {
   }
 }
 @media (min-width: 1000px) {
-  body .container .disc-container .iPhone-desktop {
+  body .container .disc-container .iPhone-desktop img {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0%;

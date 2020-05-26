@@ -151,18 +151,20 @@ body {
         }
       }
       .iPhone-desktop {
-        @media @mobile {
-          visibility: hidden;
-          width: 0px;
-          height: 0px;
-          margin-bottom: 0%;
-        }
-        @media @desktop {
-          display: flex;
-          justify-content: flex-end;
-          margin-bottom: 0%;
-          padding-right: 2%;
-          margin-top: 10.2%;
+        img {
+          @media @mobile {
+            visibility: hidden;
+            width: 0px;
+            height: 0px;
+            margin-bottom: 0%;
+          }
+          @media @desktop {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0%;
+            padding-right: 2%;
+            margin-top: 10.2%;
+          }
         }
       }
     }
