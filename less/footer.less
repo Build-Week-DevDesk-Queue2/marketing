@@ -1,0 +1,60 @@
+.footer {
+    @media @mobile {
+      width: 92.5%;
+      margin: 0px;
+    }
+  footer {
+    @media @mobile {
+      background-color: @footer-color;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 4%;
+      border-top: 1px solid #E0E0E0;
+      margin: 0px;
+    }
+
+    a {
+      @media @mobile {
+        text-decoration: none;
+        font-family: sans-serif;
+        color: @secondary-cadet;
+        margin-bottom: 4%;
+        font-size: 1.2rem;
+      }
+    }
+
+    p {
+      @media @mobile {
+        font-family: sans-serif;
+        color: @tertiary-cadet;
+        font-weight: lighter;
+        margin-top: 3%;
+      }
+    }
+  }
+
+    footer {
+      @media @desktop {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+      }
+
+      a {
+        @media @desktop {
+          visibility: hidden;
+          width: 0px;
+          height: 0px;
+        }
+      }
+
+      p {
+        @media @desktop {
+          visibility: hidden;
+          width: 0px;
+          height: 0px;
+      }
+    }
+  }
+}
